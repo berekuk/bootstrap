@@ -5,11 +5,6 @@
 
 @media (max-width: 767px) {
 
-  // Remove padding on container given explicit padding set on body
-  .container-fluid {
-    padding: 0;
-  }
-
   // TYPOGRAPHY
   // ----------
   // Reset horizontal dl
@@ -25,42 +20,13 @@
     }
   }
 
-  // GRID & CONTAINERS
-  // -----------------
-  // Remove width from containers
-  .container {
-    width: auto;
-  }
-  // Fluid rows
-  .row-fluid {
-    width: 100%;
-  }
-  // Undo negative margin on rows and thumbnails
-  .row,
-  .thumbnails {
-    margin-left: 0;
-  }
-  .thumbnails > li {
-    float: none;
-    margin-left: 0; // Reset the default margin for all li elements when no .span* classes are present
-  }
   // Make all grid-sized elements block level again
-  [class*="span"],
-  .uneditable-input[class*="span"], // Makes uneditable inputs full-width when using grid sizing
-  .row-fluid [class*="span"] {
+  .uneditable-input[class*="span"] {
     float: none;
     display: block;
     width: 100%;
     margin-left: 0;
     .box-sizing(border-box);
-  }
-  .span12,
-  .row-fluid .span12 {
-    width: 100%;
-    .box-sizing(border-box);
-  }
-  .row-fluid [class*="offset"]:first-child {
-    margin-left: 0;
   }
 
   // FORM FIELDS
@@ -108,11 +74,6 @@
 
 @media (max-width: 480px) {
 
-  // Smooth out the collapsing/expanding nav
-  .nav-collapse {
-    -webkit-transform: translate3d(0, 0, 0); // activate the GPU
-  }
-
   // Block level the page header small tag for readability
   .page-header h1 small {
     display: block;
@@ -148,20 +109,6 @@
     }
   }
 
-  // Medias
-  // Reset float and spacing to stack
-  .media .pull-left,
-  .media .pull-right  {
-    float: none;
-    display: block;
-    margin-bottom: 10px;
-  }
-  // Remove side margins since we stack instead of indent
-  .media-object {
-    margin-right: 0;
-    margin-left: 0;
-  }
-
   // Modals
   .modal {
     top:   10px;
@@ -172,10 +119,4 @@
     padding: 10px;
     margin: -10px;
   }
-
-  // Carousel
-  .carousel-caption {
-    position: static;
-  }
-
 }
